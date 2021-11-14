@@ -1,14 +1,18 @@
 const express = require("express")
 const app = express();
-const dotenv = require("dotenv")
 const mongoose = require("mongoose")
-
-const userSchema = require('./models/users')
-dotenv.config();
+// const dotenv = require("dotenv")
+// const userSchema = require('./models/users');
+const athRoute = require("./routes/ath");
+// dotenv.config();
 app.use(express.json())
 
-mongoose.connect("mongodb+srv://abrar_alzh:719719@cluster0.abt43.mongodb.net/VideoShring?retryWrites=true&w=majority").then(console.log("connected to mongodb"))
+mongoose.connect("mongodb+srv://abrar_alzh:719719@cluster0.abt43.mongodb.net/VideoShring?retryWrites=true&w=majority")
+.then(console.log("connected to mongodb"))
 .catch((err) => console.log(err));
+
+
+app.use("/api/users", athRoute);
 
 
 
