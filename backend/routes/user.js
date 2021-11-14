@@ -27,10 +27,6 @@ router.put('/:id' , async (req,res) =>{
 
 });
 
-
-
-
-
 //DELETE
 
 router.delete('/:id' , async (req,res) =>{
@@ -51,6 +47,19 @@ router.delete('/:id' , async (req,res) =>{
     }
 
 });
+
+//Get user 
+router.get("/:id" , async (req , res)=>{
+    try{
+        const user = await User.findById(req.params.id);
+        const {password , ...others}=user._doc;
+        res.status(200).json(others);
+
+    }catch{
+
+        res.status(500).json(err)
+    }
+})
 
 
 
