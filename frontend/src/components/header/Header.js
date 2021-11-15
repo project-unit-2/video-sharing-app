@@ -1,5 +1,5 @@
 import './header.css'
-// import video from '../../medie/Pexels Videos 3533.mp4'
+import video from '../../medie/v2.mp4'
 import NavBar from '../navBar/NavBar';
 import AddVideo from '../addVideo/AddV';
 
@@ -8,7 +8,7 @@ const Header = () => {
       <div className="header">
         <NavBar />
         <section className="home">
-            <video className="video-slide" src="" autoplay="true" muted loop></video>
+            <video className="video-slide" src={video} autoPlay={true} muted loop></video>
             <div className="content">
                 <h1>hype</h1>
             </div>
@@ -19,7 +19,9 @@ const Header = () => {
             </div>
         </section>
             
-        <AddVideo />
+        <div className="addSection">
+          <AddVideo />
+        </div>
       </div>
     );
 }
