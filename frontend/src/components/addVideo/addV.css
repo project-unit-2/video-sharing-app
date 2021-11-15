@@ -1,0 +1,11 @@
+.plus{
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    top: 96%;
+    left: 80%;
+    background: coral;
+    border-radius: 50%;
+    width: 3%;
+    text-align: center;
+}
