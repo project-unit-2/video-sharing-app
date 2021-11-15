@@ -1,10 +1,9 @@
 import './navBar.css'
-import logo from '../../medie/2560px-Adidas_Logo.svg.png'
 
 const NavBar = () => {
     return ( 
         <header>
-            <img src={logo} alt="Logo" className="brand logo" width="75" height="75"/>
+            <img src="" alt="Logo" className="brand logo" width="75" height="75"/>
 
             {/* <div class="menu-btn">
                 <i class="far fa-grip-horizontal"></i>
