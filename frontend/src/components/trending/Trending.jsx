@@ -1,7 +1,9 @@
+import react from 'react';
 import './trending.css'
-import video from '../../medie/Pexels Videos 3533.mp4'
-import v2 from '../../medie/v2.mp4'
+// import video from '../../medie/Pexels Videos 3533.mp4'
+// import v2 from '../../medie/v2.mp4'
 const Trending = () => {
+   
     return (
       <div className="trending">
         <h1 className="sectionTitle">Trnding Videos</h1>
@@ -18,12 +20,12 @@ const Trending = () => {
               </p>
             </div>
             <div className="md:flex-shrink-0">
-              <video className="h-80 w-full object-cover md:w-70" src={video} autoPlay={true} loop/>
+              {/* <video className="h-80 w-full object-cover md:w-70" src={video} autoPlay={true} loop/> */}
             </div>
           </div>
         </div>
 
-
+{/* 
         <div className="trendingVideos">
             <video className="video" src={video} autoPlay={true}/>
             <video className="video" src={v2} autoPlay={true}/>
@@ -33,7 +35,7 @@ const Trending = () => {
             <video className="video" src={v2} autoPlay={true}/>
             <video className="video" src={video} autoPlay={true}/>
             <video className="video" src={v2} autoPlay={true}/>
-        </div>
+        </div> */}
       </div>
     );
 }

@@ -1,6 +1,11 @@
-import react from 'react';
+import react, { useState } from 'react';
 
 const  Regiser = () => {
+
+  const [UserName , setUserName]= useState ("")
+  const [Email  , setEmail] =useState ("")
+  const [password , setPassword] = useState("")
+  
     return (
       <div class="bg-gray-100">
         <main class="min-h-screen flex flex-col items-center justify-center">
