@@ -9,6 +9,7 @@ header {
   align-items: center;
   padding: 15px 50px;
   transition: 0.5s ease;
+  background: rgba(3, 94, 251, 0.112);
 }
 img {
   height: inherit;

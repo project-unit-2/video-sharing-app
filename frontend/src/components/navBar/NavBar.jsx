@@ -12,7 +12,9 @@ const NavBar = () => {
 
             <div className="navigation">
                 <div className="navigation-items">
-                    <a href="#">Home</a>
+                    <Link to="/">
+                        <a href="#">Home</a>
+                    </Link>
                     <a href="#">Trending</a>
                     <a href="#">Type</a>
                     <Link to='login'>

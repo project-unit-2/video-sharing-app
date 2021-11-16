@@ -2,6 +2,7 @@ import './myVideos.css'
 import AddVideo from '../addVideo/AddV'
 import video from '../../medie/Pexels Videos 3533.mp4'
 import v2 from '../../medie/v2.mp4'
+import { Link } from 'react-router-dom'
 
 const MyVideos = () => {
     return ( 
@@ -9,7 +10,9 @@ const MyVideos = () => {
             <div>
                 <h1 className="sectionTitle">My Videos</h1>
                 <div className="add">
-                    <AddVideo />
+                    <Link to="/addVideoPage">
+                        <AddVideo />
+                    </Link>
                 </div>
             </div>
 
