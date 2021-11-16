@@ -30,4 +30,13 @@
     transition: 0.5s;
     border-radius: 10px;
     cursor: pointer;
-  }
+}
+.likeIcon {
+    font-weight: 400;
+    color: #fff;
+    font-size: 25px;
+    position: relative;
+    top: -85%;
+    left: 90%;
+    cursor: pointer;
+}

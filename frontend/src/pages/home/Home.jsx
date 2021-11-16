@@ -1,4 +1,3 @@
-import AddVideo from "../../components/addVideo/AddV";
 import Categories from "../../components/categories/Cats";
 import Header from "../../components/header/Header";
 import MyVideos from "../../components/myVideos/MyVideos";
