@@ -1,7 +1,7 @@
 import './myVideos.css'
 import AddVideo from '../addVideo/AddV'
-import video from '../../medie/Pexels Videos 3533.mp4'
-import v2 from '../../medie/v2.mp4'
+// import video from '../../medie/Pexels Videos 3533.mp4'
+// import v2 from '../../medie/v2.mp4'
 
 const MyVideos = () => {
     return ( 

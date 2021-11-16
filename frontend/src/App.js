@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Home from './pages/home/Home';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-import Regiser from './pages/reqister/Reqister';
+import Regiser from './pages/register/Register';
 import Login from './pages/login/Login';
+import { Context } from './Context/Context';
 
 function App() {
+  const {user} = useContext(Context);
   return (
 
     // Routes
