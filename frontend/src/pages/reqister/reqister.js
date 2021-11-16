@@ -14,10 +14,9 @@ const  Regiser = () => {
               </label>
               <input
                 class="border round-md px-3 py-2"
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Enter your password"
+                type="text"
+                name="username"
+                placeholder="Enter your username..."
               />
             </div>
             <div class="flex flex-col">
@@ -29,7 +28,6 @@ const  Regiser = () => {
                 class="border rounded-md px-3 py-2"
                 type="email"
                 name="email"
-                id="email"
                 placeholder="Enter your Email Address"
               />
             </div>
@@ -41,7 +39,6 @@ const  Regiser = () => {
                 class="border round-md px-3 py-2"
                 type="password"
                 name="password"
-                id="password"
                 placeholder="Enter your password"
               />
             </div>

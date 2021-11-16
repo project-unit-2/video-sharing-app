@@ -1,6 +1,7 @@
 import './trending.css'
 import video from '../../medie/Pexels Videos 3533.mp4'
 import v2 from '../../medie/v2.mp4'
+
 const Trending = () => {
     return (
       <div className="trending">

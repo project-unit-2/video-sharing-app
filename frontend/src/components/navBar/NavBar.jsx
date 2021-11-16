@@ -1,4 +1,5 @@
 import './navBar.css'
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return ( 
@@ -14,8 +15,12 @@ const NavBar = () => {
                     <a href="#">Home</a>
                     <a href="#">Trending</a>
                     <a href="#">Type</a>
-                    <a href="#">LogIn</a>
-                    <a href="#">SignUp</a>
+                    <Link to='login'>
+                        <a href="#">LogIn</a>
+                    </Link>
+                    <Link to="register">
+                        <a href="#">SignUp</a>
+                    </Link>
                 </div>
             </div>
 

@@ -1,6 +1,6 @@
 import react from 'react';
 
-const  Login = () => {
+const Login = () => {
     return (
       <div class="bg-gray-100">
         <main class="min-h-screen flex flex-col items-center justify-center">
