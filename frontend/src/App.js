@@ -10,6 +10,8 @@ import Login from './pages/login/Login';
 
 function App() {
   return (
+
+    // Routes
     <Router>
       <Routes>
         <Route path='/' element={<Home />} />
