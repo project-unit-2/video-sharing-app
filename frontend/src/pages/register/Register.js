@@ -1,10 +1,7 @@
-import react, { useState } from 'react';
+import react from 'react';
 
 const  Regiser = () => {
 
-  const [UserName , setUserName]= useState ("")
-  const [Email  , setEmail] =useState ("")
-  const [password , setPassword] = useState("")
   
     return (
       <div class="bg-gray-100">
@@ -19,10 +16,9 @@ const  Regiser = () => {
               </label>
               <input
                 class="border round-md px-3 py-2"
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Enter your password"
+                type="text"
+                name="username"
+                placeholder="Enter your username..."
               />
             </div>
             <div class="flex flex-col">
@@ -34,7 +30,6 @@ const  Regiser = () => {
                 class="border rounded-md px-3 py-2"
                 type="email"
                 name="email"
-                id="email"
                 placeholder="Enter your Email Address"
               />
             </div>
@@ -46,7 +41,6 @@ const  Regiser = () => {
                 class="border round-md px-3 py-2"
                 type="password"
                 name="password"
-                id="password"
                 placeholder="Enter your password"
               />
             </div>

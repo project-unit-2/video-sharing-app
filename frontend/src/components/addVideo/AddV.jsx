@@ -1,11 +1,17 @@
 import './addV.css'
 
 const AddVideo = () => {
-    return (
-      <div className="plus">
-          <i className="fas fa-plus"></i>
-      </div>
-    );
+
+  const click = () => {
+    console.log("object");
+  }
+
+
+  return (
+    <div className="plus" onClick={click}>
+        <i className="fas fa-plus"></i>
+    </div>
+  );
 }
  
 export default AddVideo;

@@ -1,12 +1,15 @@
+import AddVideo from "../../components/addVideo/AddV";
+import Categories from "../../components/categories/Cats";
 import Header from "../../components/header/Header";
-import Trending from "../../components/trending/Trending";
+import MyVideos from "../../components/myVideos/MyVideos";
 
 
 const Home = () => {
     return ( 
         <div>
             <Header />
-            <Trending />
+            <MyVideos />
+            <Categories />
         </div>
      );
 }

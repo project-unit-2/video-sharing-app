@@ -1,5 +1,4 @@
 import './header.css'
-// import video from '../../medie/v2.mp4'
 import NavBar from '../navBar/NavBar';
 import AddVideo from '../addVideo/AddV';
 
