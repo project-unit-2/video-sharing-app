@@ -1,14 +1,14 @@
 import axios from 'axios';
 import react, { useContext, useRef, useState } from 'react';
+import { Context } from '../../Context/Context';
 
 const Login = () => {
 
-  const userRef = userRef();
-  const passwordRaf = userRef();
-  const {dispatch , idFecthing}= useContext(Context)
+  const userRef = useRef();
+  const passwordRaf = useRef();
+  const {dispatch , isFetching}= useContext(Context)
 
-const handleSumbmit =(e) =>{
-  e.preventDefault()
+const handleSumbmit = async () =>{
   dispatch({type:"LOGIN_START"});
 
   try{
@@ -17,33 +17,37 @@ const handleSumbmit =(e) =>{
       password : passwordRaf.current.value,
     })
     dispatch({type:"LOGIN_SUCCESS", payload:res.data});
+    console.log(res.data);
   }catch(err){
 
+    dispatch({type:"LOGIN_FAILURE"});
+
   }
-} ;
+};
+
     return (
-      <div class="bg-gray-100">
-        <main class="min-h-screen flex flex-col items-center justify-center">
-          <div class="space-y-3 my-5">
-            <h1 class="text-3xl font-extrabold ">Sing in to your Account</h1>
-            <p class="text-center">
+      <div className="bg-gray-100">
+        <main className="min-h-screen flex flex-col items-center justify-center">
+          <div className="space-y-3 my-5">
+            <h1 className="text-3xl font-extrabold ">Sing in to your Account</h1>
+            <p className="text-center">
               or
               <a
-                class="text-indigo-600 border-b border-indigo-600"
+                className="text-indigo-600 border-b border-indigo-600"
               >
                 {" "}
                 reqister your account{" "}
               </a>
             </p>
           </div>
-          <div class="max-w-md w-full mx-auto bg-white rounded-lg p-7 space-y-7 ">
-            <div class="flex flex-col">
-              <label class="mb-1 text-sm" for="text">
+          <div className="max-w-md w-full mx-auto bg-white rounded-lg p-7 space-y-7 ">
+            <div className="flex flex-col">
+              <label className="mb-1 text-sm" htmlFor="text">
                 {" "}
                 User Name{" "}
               </label>
               <input
-                class="border rounded-md px-3 py-2"
+                className="border rounded-md px-3 py-2"
                 type="email"
                 name="email"
                 id="email"
@@ -52,12 +56,12 @@ const handleSumbmit =(e) =>{
               />
             </div>
 
-            <div class="flex flex-col">
-              <label for="email" class="mb-1 text-sm">
+            <div className="flex flex-col">
+              <label htmlFor="email" className="mb-1 text-sm">
                 Password
               </label>
               <input
-                class="border round-md px-3 py-2"
+                className="border round-md px-3 py-2"
                 type="password"
                 name="password"
                 id="password"
@@ -67,27 +71,28 @@ const handleSumbmit =(e) =>{
             </div>
 
             <div>
-              <button class="w-full rounded-md bg-indigo-600 text-white py-2  " onSubmit={handleSumbmit}>
-                Sing in{" "}
+              <button className="w-full rounded-md bg-indigo-600 text-white py-2  " onClick={handleSumbmit}
+              disabled={isFetching} >
+                Log in{" "}
               </button>
             </div>
-            <div class="relative pb-2 text-center">
-              <div class="absolute top-0 left-0 w-full border"></div>
-              <div class="absolute -top-3 left-0 w-full text-center"></div>
-              <span class="bg-white px-3 text-gray-600">or continue Via </span>
+            <div className="relative pb-2 text-center">
+              <div className="absolute top-0 left-0 w-full border"></div>
+              <div className="absolute -top-3 left-0 w-full text-center"></div>
+              <span className="bg-white px-3 text-gray-600">or continue Via </span>
             </div>
             <div>
-              <div class="grid grid-cols-3 gap-3 text-center text-2xl">
-                <div class="border-2 rounded-md p-3 cursor-pointer hover:border-gray-700">
-                  <i class="fab fa-facebook-square"></i>
+              <div className="grid grid-cols-3 gap-3 text-center text-2xl">
+                <div className="border-2 rounded-md p-3 cursor-pointer hover:border-gray-700">
+                  <i className="fab fa-facebook-square"></i>
                 </div>
 
-                <div class="border-2 rounded-md p-3 cursor-pointer hover:border-gray-700">
-                  <i class="fab fa-twitter-square"></i>
+                <div className="border-2 rounded-md p-3 cursor-pointer hover:border-gray-700">
+                  <i className="fab fa-twitter-square"></i>
                 </div>
 
-                <div class="border-2 rounded-md p-3 cursor-pointer hover:border-gray-700">
-                  <i class="fab fa-linkedin"></i>
+                <div className="border-2 rounded-md p-3 cursor-pointer hover:border-gray-700">
+                  <i className="fab fa-linkedin"></i>
                 </div>
               </div>
             </div>
