@@ -7,6 +7,8 @@ const postRoute = require("./routes/post")
 app.use(express.json())
 const multer = require("multer")
 
+var cors = require('cors')
+app.use(cors())
 
 // MongooDB Connection
 mongoose.connect("mongodb+srv://abrar_alzh:719719@cluster0.abt43.mongodb.net/VideoShring?retryWrites=true&w=majority")

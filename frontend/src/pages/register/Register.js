@@ -1,6 +1,24 @@
-import react from 'react';
+import react, { useState  } from 'react';
+import axios from 'axios';
 
 const  Regiser = () => {
+
+  const [userName , setUserName]=useState("")
+  const [email , setEmail]=useState("")
+  const [password , setPassword]=useState("")
+
+  const handleSumbit = async () =>{
+    try{
+    const res = await axios.post("/auth/register" , {
+      userName,
+      email,
+      password,
+    });
+    console.log(res);
+  }catch (err){
+    console.log(err)
+  }
+  };
 
   
     return (
@@ -19,6 +37,8 @@ const  Regiser = () => {
                 type="text"
                 name="username"
                 placeholder="Enter your username..."
+                value={userName}
+                onChange={e=>setUserName(e.target.value)}
               />
             </div>
             <div class="flex flex-col">
@@ -30,7 +50,9 @@ const  Regiser = () => {
                 class="border rounded-md px-3 py-2"
                 type="email"
                 name="email"
+                value={email}
                 placeholder="Enter your Email Address"
+                onChange={e=>setEmail(e.target.value)}
               />
             </div>
             <div class="flex flex-col">
@@ -42,10 +64,12 @@ const  Regiser = () => {
                 type="password"
                 name="password"
                 placeholder="Enter your password"
+                value={password}
+                onChange={e=>setPassword(e.target.value)}
               />
             </div>
             <div>
-              <button class="w-full rounded-md bg-indigo-600 text-white py-2  ">
+              <button class="w-full rounded-md bg-indigo-600 text-white py-2" onClick={handleSumbit}>
                 Sing up{" "}
               </button>
             </div>

@@ -1,6 +1,26 @@
-import react from 'react';
+import axios from 'axios';
+import react, { useContext, useRef, useState } from 'react';
 
 const Login = () => {
+
+  const userRef = userRef();
+  const passwordRaf = userRef();
+  const {dispatch , idFecthing}= useContext(Context)
+
+const handleSumbmit =(e) =>{
+  e.preventDefault()
+  dispatch({type:"LOGIN_START"});
+
+  try{
+    const res = await axios.post("/auth/login" ,{
+      username :userRef.current.value,
+      password : passwordRaf.current.value,
+    })
+    dispatch({type:"LOGIN_SUCCESS", payload:res.data});
+  }catch(err){
+
+  }
+} ;
     return (
       <div class="bg-gray-100">
         <main class="min-h-screen flex flex-col items-center justify-center">
@@ -18,9 +38,9 @@ const Login = () => {
           </div>
           <div class="max-w-md w-full mx-auto bg-white rounded-lg p-7 space-y-7 ">
             <div class="flex flex-col">
-              <label class="mb-1 text-sm" for="email">
+              <label class="mb-1 text-sm" for="text">
                 {" "}
-                Email Address{" "}
+                User Name{" "}
               </label>
               <input
                 class="border rounded-md px-3 py-2"
@@ -28,6 +48,7 @@ const Login = () => {
                 name="email"
                 id="email"
                 placeholder="Enter your Email Address"
+                ref={userRef}
               />
             </div>
 
@@ -41,11 +62,12 @@ const Login = () => {
                 name="password"
                 id="password"
                 placeholder="Enter your password"
+                ref={passwordRaf}
               />
             </div>
 
             <div>
-              <button class="w-full rounded-md bg-indigo-600 text-white py-2  ">
+              <button class="w-full rounded-md bg-indigo-600 text-white py-2  " onSubmit={handleSumbmit}>
                 Sing in{" "}
               </button>
             </div>
