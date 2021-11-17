@@ -4,8 +4,10 @@ const mongoose = require("mongoose")
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/user")
 const postRoute = require("./routes/post")
-app.use(express.json())
 const multer = require("multer")
+const path = require("path")
+app.use(express.json())
+app.use("/videos", express.static(path.join(__dirname, "/videos")));
 
 // MongooDB Connection
 mongoose.connect("mongodb+srv://abrar_alzh:719719@cluster0.abt43.mongodb.net/VideoShring?retryWrites=true&w=majority")
@@ -17,10 +19,10 @@ mongoose.connect("mongodb+srv://abrar_alzh:719719@cluster0.abt43.mongodb.net/Vid
 // Upload Files
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb (null, "images")
+        cb (null, "videos")
     },
     filename: (req, file, cb) => {
-        cb (null, "hello.mp4")
+        cb (null, req.body.name)
     }
 })
 
