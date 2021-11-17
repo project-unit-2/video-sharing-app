@@ -5,7 +5,7 @@ import { ContextProvider } from "./Context/Context";
 
 ReactDOM.render(
   <ContextProvider>
-    <App />,
+    <App />
   </ContextProvider>,
   document.getElementById('root')
 );

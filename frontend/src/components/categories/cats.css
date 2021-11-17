@@ -1,6 +1,5 @@
 .cats {
     border-radius: 10px;
-    height: inherit;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -8,11 +7,11 @@
 }
 .eachCat {
     width: 40%;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 50px 15px 50px ;
+    padding: 15px 50px 15px 50px;
+    border-radius: 20px;
 }
 .eachCat:not(:last-child) {
     margin-right: 20px;
@@ -31,5 +30,5 @@
 }
 .catSection span {
     position: relative;
-    top: -230px;
+    top: -150px;
 }

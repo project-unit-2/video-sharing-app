@@ -19,9 +19,6 @@ const Header = () => {
             </div>
         </section>
             
-        <div className="addSection">
-          <AddVideo />
-        </div>
       </div>
     );
 }
