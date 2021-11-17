@@ -2,8 +2,8 @@ import './trending.css'
 import video from '../../medie/Pexels Videos 3533.mp4'
 import v2 from '../../medie/v2.mp4'
 
-const Trending = () => {
 
+const Trending = () => {
 
   return (
     <div className="trending">
@@ -21,21 +21,21 @@ const Trending = () => {
             </p>
           </div>
           <div className="md:flex-shrink-0">
-            <video className="h-80 w-full object-cover md:w-70" src={video} autoPlay={true} loop/>
+            <video className="h-80 w-full object-cover md:w-70" src={video} autoPlay={true} loop/> 
             <i className="far fa-heart likeIcon"></i>
           </div>
         </div>
       </div>
       
       <div className="trendingVideos">
-          <video className="video" src={video} autoPlay={true}/>
-          <video className="video" src={v2} autoPlay={true}/>
-          <video className="video" src={video} autoPlay={true}/>
-          <video className="video" src={v2} autoPlay={true}/>
-          <video className="video" src={video} autoPlay={true}/>
-          <video className="video" src={v2} autoPlay={true}/>
-          <video className="video" src={video} autoPlay={true}/>
-          <video className="video" src={v2} autoPlay={true}/>
+          <video className="video" src={video} autoPlay={false}/>
+          <video className="video" src={v2} autoPlay={false}/>
+          <video className="video" src={video} autoPlay={false}/>
+          <video className="video" src={v2} autoPlay={false}/>
+          <video className="video" src={video} autoPlay={false}/>
+          <video className="video" src={v2} autoPlay={false}/>
+          <video className="video" src={video} autoPlay={false}/>
+          <video className="video" src={v2} autoPlay={false}/>
       </div>
     </div>
   );

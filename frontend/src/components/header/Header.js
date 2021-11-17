@@ -1,7 +1,7 @@
 import './header.css'
-import video from '../../medie/v2.mp4'
 import NavBar from '../navBar/NavBar';
 import AddVideo from '../addVideo/AddV';
+import video from '../../medie/v2.mp4'
 
 const Header = () => {
     return (
@@ -13,9 +13,9 @@ const Header = () => {
                 <h1>hype</h1>
             </div>
             <div className="media-icons">
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-instagram"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
+                <i className="fab fa-facebook-f"></i>
+                <i className="fab fa-instagram"></i>
+                <i className="fab fa-twitter"></i>
             </div>
         </section>
             

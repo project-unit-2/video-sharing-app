@@ -13,15 +13,15 @@ const NavBar = () => {
             <div className="navigation">
                 <div className="navigation-items">
                     <Link to="/">
-                        <a href="#">Home</a>
+                        <span href="#">Home</span>
                     </Link>
-                    <a href="#">Trending</a>
-                    <a href="#">Type</a>
+                    <span href="#">Trending</span>
+                    <span href="#">Type</span>
                     <Link to='login'>
-                        <a href="#">LogIn</a>
+                        <span href="#">LogIn</span>
                     </Link>
                     <Link to="register">
-                        <a href="#">SignUp</a>
+                        <span href="#">SignUp</span>
                     </Link>
                 </div>
             </div>

@@ -42,17 +42,17 @@ section {
   transition: 0.5s ease;
 }
 
-.home .media-icons a {
+.home .media-icons i {
   color: #fff;
   font-size: 1.6em;
   transition: 0.3s ease;
 }
 
-.home .media-icons a:not(:last-child) {
+.home .media-icons i:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.home .media-icons a:hover {
+.home .media-icons i:hover {
   transform: scale(1.3);
 }
 
