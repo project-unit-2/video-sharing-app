@@ -41,7 +41,7 @@ const MyVideos = () => {
             <div className="trendingVideos">
                 {videos.map((ele, index) => {
                     return (
-                        <video className="video" src={PF + ele.video} autoPlay={true} key={index}/>
+                        <video className="video" src={PF + ele.video} autoPlay={false} key={index}/>
                     )
                 })}
             </div>
