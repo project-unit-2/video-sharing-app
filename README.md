@@ -1,20 +1,34 @@
 # Project Unit 2
 
-## built with :
-1-React.
-2-Nodejs.
-3-Express
-4-MongooDB
-5-CSS library (Tailwind)
+## Requirements
+
+- Development branches ☑️
+- Wireframe ☑️
+- Project Management tool (Trello)
+- ReactJS ☑️
+- Express ☑️
+- Node ☑️
+- Axios ☑️
+- ContextAPI ☑️
+- useState ☑️
+- useEffect ☑️
+- useNavigate ☑️
+- User auth ☑️
+- CRUD ☑️
+
 ## Functionalities in the website:
-1-LogIn and Registration system
-2-See all Videos
-3-Add video with some inforamtation
-5-Videos Types
-4-Modify account info
-## I had a problem:
-1-mongoDB : difficulty connecting the database in the backend
+* LogIn and Registration system
+* See all Videos
+* Add video with some inforamtation
+* Videos Types
+* Modify account info
+## Problems:
+* Choose The Idea
+* Thinking about Desing, how to build the fit design for our idea
+* MongoDB : difficulty connecting the database in the backend
+* How to desplay data
 ## Links:
-1-figma : https://www.figma.com/file/8WU2f6xwcVOsBA5M8HWuQA/Video-Sharing-app?node-id=0%3A1
-2-trello : https://trello.com/b/FvLLiw2K/video-sharing-plan
-3-project I upload it and here is the link for you :white_heart: =>
+* Figma: https://www.figma.com/file/8WU2f6xwcVOsBA5M8HWuQA/Video-Sharing-app?node-id=0%3A1
+* Trello: https://trello.com/b/FvLLiw2K/video-sharing-plan
+* Repo: https://github.com/project-unit-2/video-sharing-app
+* Project I upload it and here is the link for you :white_heart: => 
