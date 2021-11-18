@@ -21,7 +21,7 @@
 * See all Videos
 * Add video with some inforamtation
 * Videos Types
-* Modify account info
+* Modify Account
 ## Problems:
 * Choose The Idea
 * Thinking about Desing, how to build the fit design for our idea
