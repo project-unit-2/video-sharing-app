@@ -8,6 +8,7 @@ const multer = require("multer")
 const path = require("path")
 app.use(express.json())
 app.use("/videos", express.static(path.join(__dirname, "/videos")));
+const PORT = process.env.PORT || 5000
 
 // MongooDB Connection
 mongoose.connect("mongodb+srv://abrar_alzh:719719@cluster0.abt43.mongodb.net/VideoShring?retryWrites=true&w=majority")
@@ -44,4 +45,4 @@ app.use("/api/posts", postRoute)
 
 
 
-app.listen(5000, () => console.log("Server up to running"))
+app.listen(PORT, () => console.log("Server up to running"))

@@ -1,11 +1,13 @@
 import {useState} from 'react';
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 
 const  Regiser = () => {
 
   const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const navigation = useNavigate();
 
   const handleClick = async () => {
     try {
@@ -15,6 +17,7 @@ const  Regiser = () => {
         password
       })
       console.log(res);
+      navigation('/')
     } catch (err) {
       console.log(err);
     }

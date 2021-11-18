@@ -5,6 +5,7 @@
 .settings {
     display: flex;
     margin-top: 100px;
+    /* width: 50%; */
 }
 
 .settingsWrapper {
@@ -103,4 +104,8 @@
 
 .settingsSubmitButton:hover {
     background-color: rgb(1, 114, 114);
+}
+
+.cancle {
+    background: rgb(81, 81, 245);
 }

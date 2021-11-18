@@ -2,8 +2,6 @@ import './myVideos.css'
 import AddVideo from '../addVideo/AddV'
 import { Link } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react'
-// import video from '../../medie/Pexels Videos 3533.mp4'
-// import v2 from '../../medie/v2.mp4'
 import {Context} from '../../Context/Context'
 import axios from 'axios'
 
@@ -12,18 +10,23 @@ const MyVideos = () => {
 
     const {user} = useContext(Context)
     const [videos, setVideos] = useState([])
+
     useEffect(()=> {
         async function getVidios() {
             try {
-                const res = await axios.get(`/posts?user=${user.username}`)
-                console.log(res.data);
-                setVideos(res.data)
+                if(user) {
+                    const res = await axios.get(`/posts?user=${user.username}`)
+                    // console.log(res.data);
+                    setVideos(res.data)
+                } else {
+                    console.log("no user");
+                }
             } catch (err) {
                 console.log(err);
             }
         }
         getVidios()
-    } ,[])
+    }, [user])
 
 
     return ( 
