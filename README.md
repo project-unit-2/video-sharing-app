@@ -1,7 +1,7 @@
 # Project Unit 2
 
 ## built with :
-1-React.
+*-React.
 2-Nodejs.
 3-Express
 4-MongooDB
