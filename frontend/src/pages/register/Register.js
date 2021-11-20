@@ -17,7 +17,7 @@ const  Regiser = () => {
         password
       })
       console.log(res);
-      navigation('/')
+      navigation('/login')
     } catch (err) {
       console.log(err);
     }

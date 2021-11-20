@@ -1,5 +1,4 @@
 import "./cats.css";
-import v2 from "../../medie/v2.mp4";
 import { useContext } from "react";
 import { VideoTypeContext } from "../../Context/Context";
 import axios from "axios";

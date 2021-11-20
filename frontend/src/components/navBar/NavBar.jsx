@@ -25,16 +25,14 @@ const NavBar = () => {
             <Link to="/">
               <span>Home</span>
             </Link>
-            {user ? (<span href="#" onClick={handleLogout}>Logout</span>) : (
-              <div>
-                <Link to="/login">
-                  <span>LogIn</span>
-                </Link>
-                <Link to="/register">
-                  <span>SignUp</span>
-                </Link>
-              </div>
-            )}
+            <Link to="/login">
+              <span>LogIn</span>
+            </Link>
+            <Link to="/register">
+              <span>SignUp</span>
+            </Link>
+
+            {user && <span onClick={handleLogout}>Logout</span>}
           </div>
         </div>
 

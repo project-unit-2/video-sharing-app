@@ -1,6 +1,6 @@
 import "./userSetting.css";
 import NavBar from "../../components/navBar/NavBar";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Context } from "../../Context/Context";
 import axios from 'axios'
 

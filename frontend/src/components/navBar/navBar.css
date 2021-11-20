@@ -18,6 +18,9 @@ header {
 header .navigation {
   position: relative;
 }
+header .navigation .navigation-items {
+  display: flex;
+}
 header .navigation .navigation-items span {
   position: relative;
   color: #fff;
@@ -26,8 +29,9 @@ header .navigation .navigation-items span {
   margin-left: 30px;
   transition: 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
 }
-
 header .navigation .navigation-items span:before {
   content: "";
   position: absolute;
@@ -38,7 +42,6 @@ header .navigation .navigation-items span:before {
   left: 0;
   transition: 0.3s ease;
 }
-
 header .navigation .navigation-items span:hover:before {
   width: 100%;
 }
